@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 // Define the URL for the MongoDB connection
-const URL = 'mongodb://127.0.0.1:27017/habbit_db';
+const URL = 'mongodb+srv://arun:NtzLgLyks7iuzCvp@cluster0.1vzl8mv.mongodb.net/sign';
 
 // Connect to the MongoDB using the defined URL
 mongoose.connect(URL)
