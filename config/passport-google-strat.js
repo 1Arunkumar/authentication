@@ -6,9 +6,9 @@ const User = require('../models/user'); // Assuming the user model is defined in
 
 // Define Google OAuth2 Strategy
 passport.use(new googleStrategy({
-    clientID: "550098731809-de3r0s8t1areh4hk8remhudc05o68vsn.apps.googleusercontent.com",
-    clientSecret: "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",
-    callbackURL: "http://localhost:8000/users/auth/google/callback",
+    clientID: "112265320328-u4afv5toqq953pd7rr6pch0v4aq9sces.apps.googleusercontent.com",
+    clientSecret: "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",
+    callbackURL: "https://glorious-jade-suspenders.cyclic.cloud//users/auth/google/callback",
 },
 async function(accessToken, refreshToken, profile, done) {
     try {
