@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <div class="box">
+    <form action="/users/create" method="post">
+        <span class="text-center">Sign Up</span>
+            <div class="input-container">
+        
+        <input type="text" id="email" name="email" required>
+        <label for="name">email:</label>
+    </div>
+    <div class="input-container">
+        <input type="password" id="password" name="password" required>
+        <label for="password">Password:</label>
+    </div>
+     <div class="input-container">
+        <input type="password" id="confirm_password" name="C_password" required>
+        <label for="confirm password">Confirm Password:</label>
+    </div>
+        <input type="submit" class="btn" >   
+        <p style="color: beige; ">Have an account?,
+            <a href="/" style="text-decoration: none; color: rgb(178, 26, 43);">sign-in!</a></p>
+        </div></form>
+        <div style="margin-top: 41.3%; margin-left: 44%;"><h1>--------or--------</h1>
+            <div class="google-btn" >
+        
+      <div class="google-icon-wrapper">
+        <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+      </div>
+      <a href="/users/auth/google" id="google" class="btn-text" style="text-decoration: none;">google signup/in</a>
+    </div>
+    </div>
+    </body>
+    </html>
+    

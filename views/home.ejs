@@ -1,0 +1,50 @@
+
+    <!DOCTYPE html>
+<html>
+    <head>
+     <title>
+        <%= title %>
+     </title>
+     <link rel="stylesheet" href="/css/home.css">
+     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    </head>
+    <body>
+        <div class="box">
+    <form action="/users/sign-in" method="post">
+        <span class="text-center">Sign In</span>
+        <div class="input-container">
+        
+        <input type="text" id="email" name="email" required>
+        <label for="email">email:</label>
+    </div>
+        <div class="input-container">	
+        
+        <input type="password" id="password" name="password" required>
+        <label for="password">Password:</label>
+    </div>
+    <input type="submit" class="btn" >   <br>
+    <p style="color: beige; margin-left: 30%;">new here,
+    <a href="/users/sign-up"style="text-decoration: none; color: rgb(178, 26, 43);">sign-up!</a></p>
+    </form>	
+   
+    </div>
+    
+        
+       
+    <div style="margin-top: 40%; margin-left: 44%;"><h1>--------or--------</h1>
+        <div class="google-btn" >
+    
+  <div class="google-icon-wrapper">
+    <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+  </div>
+  <a href="/users/auth/google"  id="google" class="btn-text" >google signup/in</a>
+</div>
+</div>
+
+    </body>
+    </html>
+
+
+
+
+   

@@ -1,0 +1,19 @@
+body{
+    background-color:rgb(21, 16, 33);
+    text-align: center;
+    color: beige;
+}
+#reset{
+    background-color: rgb(7, 92, 135);
+    padding: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 5px;
+}
+#signout{
+    background-color: rgb(159, 4, 4);
+    padding: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 5px;
+}
