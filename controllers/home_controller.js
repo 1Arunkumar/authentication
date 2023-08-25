@@ -1,5 +1,14 @@
 module.exports.home = function(req,res){
-  return res.render('home',{
-        title:"home",
-})
+  if (req.isAuthenticated()) {
+        
+      
+    // Set user_id cookie
+ 
+   return res.render('habit', {
+       title: "habit"
+   });
+}
+return res.render('home',{
+  title:"home",
+})// Render signin page if not authenticated
 }
