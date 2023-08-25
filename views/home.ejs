@@ -5,10 +5,13 @@
      <title>
         <%= title %>
      </title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
      <link rel="stylesheet" href="/css/home.css">
      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     </head>
     <body>
+       
         <div class="box">
     <form action="/users/sign-in" method="post">
         <span class="text-center">Sign In</span>
@@ -40,7 +43,28 @@
   <a href="/users/auth/google"  id="google" class="btn-text" >google signup/in</a>
 </div>
 </div>
+<script>
+    <% if(flash.success && flash.success.length>0){%>
+new Noty({
 
+text: '<%= flash.success %>',
+type: 'success',
+layout: 'topRight',
+timeout:1500 
+}).show();
+       
+        <% } %>
+        <% if(flash.error && flash.error.length>0){%>
+new Noty({
+
+text: '<%= flash.error %>',
+type: 'error',
+layout: 'topRight',
+timeout:1500 
+}).show();
+       
+        <% } %>
+   </script>
     </body>
     </html>
 
