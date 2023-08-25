@@ -1,5 +1,7 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
 <link rel="stylesheet" href="/css/reset.css">
     </head>
     <body>
@@ -9,7 +11,7 @@
             
             <div class="input-container">
             <input type="password" name="curr_password" id="curr_password">
-            <label for="curr_password">Current password</label>
+            <label for="curr_password">Current Password</label>
         </div>
          <div class="input-container">
             <input type="password" name="new_password" id="new_password">
@@ -20,5 +22,27 @@
         </div>
             <input type="submit" name="submit" class="btn">
         </form>
+        <script>
+            <% if(flash.success && flash.success.length>0){%>
+    new Noty({
+
+    text: '<%= flash.success %>',
+    type: 'success',
+    layout: 'topRight',
+    timeout:1500 
+}).show();
+               
+                <% } %>
+                <% if(flash.error && flash.error.length>0){%>
+    new Noty({
+
+    text: '<%= flash.error %>',
+    type: 'error',
+    layout: 'topRight',
+    timeout:1500 
+}).show();
+               
+                <% } %>
+           </script>
     </body>
 </html>
