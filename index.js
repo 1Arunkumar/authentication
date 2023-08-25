@@ -6,9 +6,9 @@ const session = require('express-session');
 const passport = require('passport');
 const passportGoogle = require('./config/passport-google-strat'); // Assuming this sets up Google OAuth strategy
 const passportLocal = require('./config/passport-local-strat'); // Assuming this sets up local strategy
-
+const flash= require('connect-flash');
 const db = require('./config/mongoose'); // Make sure this is properly defined
-
+const customMware = require('./config/middleware');
 // Middleware setup
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -34,6 +34,8 @@ app.use(passport.session());
 
 // Middleware to set authenticated user in response locals
 app.use(passport.setAuthenticatedUser);
+app.use(flash());
+app.use(customMware.setFlash);
 
 // Route handling
 app.use('/', require('./routes')); // Assuming routes are defined in './routes'
