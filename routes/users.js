@@ -14,7 +14,7 @@ const usercontroller = require('../controllers/user_controller');
 router.post('/sign-in',passport.authenticate(
     'local',
     {failureRedirect:'/'},
-),usercontroller.in);
+),usercontroller.createsession);
 router.get('/reset',passport.checkAuthentication,usercontroller.reset);
 router.post('/update',usercontroller.update);
 router.get('/sign-up',usercontroller.up);
