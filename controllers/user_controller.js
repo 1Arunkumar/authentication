@@ -51,6 +51,15 @@ module.exports.createsession = async function(req, res) {
     });
     
 };
+module.exports.createsession1 = async function(req, res) {
+    
+    req.flash('success','signin successfull')
+    res.render('habit', {
+        title: "habit",
+        
+    });
+    
+}
 
 // Controller method for destroying a user session (logout)
 module.exports.destroySession = function(req, res) {
