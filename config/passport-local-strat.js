@@ -21,16 +21,20 @@ async function(req, email, password, done) {
 
             if (isPasswordMatch) {
                 console.log('Signin success');
+                req.flash('success','signin successfull');
                 return done(null, user); // Authentication successful
             } else {
+                req.flash('error','Invalid password')
                 console.log('Invalid password');
                 return done(null, false); // Authentication failed
             }
         } else {
+            req.flash('error','user doesnt exist');
             console.log('User does not exist');
             return done(null, false); // Authentication failed
         }
     } catch (error) {
+        req.flash('error',err);
         console.log('Error in finding user --> passport');
         return done(error);
     }
