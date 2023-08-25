@@ -7,8 +7,10 @@ const bcrypt = require('bcrypt');
 
 // Controller method for rendering signup page
 module.exports.up = function(req, res) {
-    if(req.isAuthenticated){
-    return res.render('habit');
+  
+    
+    if(req.isAuthenticated()){
+        return res.render('habit');
     }
     return res.render('signup');
 };
