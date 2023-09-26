@@ -22,7 +22,7 @@ module.exports.create = async function(req, res) {
         if (user) {
             console.log('User already exists');
             req.flash('error','user already exists');
-            return res.redirect('/users/sign-in');
+            return res.redirect('/');
         }
         if (req.body.password === req.body.C_password) {
             await User.create({
